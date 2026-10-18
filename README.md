@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Python Testing Course
 
 Dieses Repository ist eine praxisorientierte Lernumgebung für das Schreiben von Tests mit Python, pytest und Test-Driven Development (TDD). Es wurde als Übungsprojekt aufgebaut, um die wichtigsten Konzepte der Softwarequalität, des Testens und der sauberen Code-Entwicklung in einer leicht verständlichen, aber professionellen Form zu vermitteln.
@@ -232,3 +233,37 @@ Wenn Sie die Grundlagen verstanden haben und regelmäßig mit den Übungen arbei
 ## Hinweis
 
 Dieses Projekt ist als Lernprojekt konzipiert und eignet sich besonders für Selbststudium, Workshops, Code-Reviews oder den Einstieg in Test-Driven Development mit Python.
+=======
+# Testing and TDD with Python
+
+Exercises for learning unit testing and test-driven development with [pytest](https://docs.pytest.org).
+
+## Setup
+
+Install [uv](https://docs.astral.sh/uv/), then:
+
+```bash
+uv sync
+uv run pytest
+```
+
+## Layout
+
+| Exercise | Code | Tests |
+|---|---|---|
+| Exploration (pytest, mocks, fakes) | `src/testing_course/exploration/` | `tests/exploration/` |
+| Bowling kata | `src/testing_course/bowling/` | `tests/bowling/` |
+| Connect Four (TDD) | `src/testing_course/connect_four/` | `tests/connect_four/` |
+
+## Useful commands
+
+```bash
+uv run pytest tests/bowling      # one exercise
+uv run pytest -k spare           # tests matching a name
+uv run pytest --cov              # coverage
+uv run ruff check                # lint
+uv run ruff format               # format
+uv run ty check                  # type check
+uv run connect-four              # play Connect Four
+```
+>>>>>>> PythonTesting/Vorlesung
