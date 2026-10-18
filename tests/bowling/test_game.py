@@ -1,6 +1,5 @@
 import pytest
 from testing_course.bowling.game import Game
-import pytest
 
 @pytest.fixture
 def sut():

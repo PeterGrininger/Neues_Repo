@@ -3,6 +3,10 @@ from testing_course.connect_four.player import Player
 
 class ConnectFourGame:
     def __init__(self, player_on_turn: Player) -> None:
+        # feld ... list of lists
+        # on_turn == PLAYER
+        # game_over == True/False
+
         raise NotImplementedError
 
     def get_player_at(self, row: int, col: int) -> Player:
