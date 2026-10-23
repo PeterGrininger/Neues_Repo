@@ -1,10 +1,11 @@
-from testing_course.connect_four.player import Player
-from testing_course.connect_four.connect_four import InvalidMoveError
-
-
 """
 USE: uv run python -m testing_course.connect_four
 """
+
+
+# IMPORTS
+from testing_course.connect_four.player import Player
+from testing_course.connect_four.connect_four import InvalidMoveError
 
 
 # ================
@@ -14,6 +15,7 @@ ROWS = 6
 COLS = 7
 # ================
 
+
 # ===================
 # COLORS FOR PRINTING
 # ===================
@@ -21,6 +23,7 @@ RED = "\033[31m"
 YELLOW = "\033[33m"
 RESET = "\033[0m"
 # ===================
+
 
 class ConnectFourGame:
     """
@@ -38,6 +41,7 @@ class ConnectFourGame:
         self.game_over = False
         self.game_winner = Player.NONE
 
+
     def get_player_at(self, row: int, col: int) -> Player:
         """
         Return the player at requested field, or Player.NONE if it is empty
@@ -52,6 +56,7 @@ class ConnectFourGame:
 
         return Player.NONE
 
+
     @property
     def player_on_turn(self) -> Player:
         """
@@ -59,6 +64,7 @@ class ConnectFourGame:
         """
 
         return self.on_turn
+
 
     @property
     def is_game_over(self) -> bool:
@@ -68,6 +74,7 @@ class ConnectFourGame:
 
         return self.game_over
 
+
     @property
     def winner(self) -> Player:
         """
@@ -75,6 +82,7 @@ class ConnectFourGame:
         """
 
         return self.game_winner
+
 
     def reset(self, player_on_turn: Player) -> None:
         """
@@ -87,6 +95,7 @@ class ConnectFourGame:
         self.on_turn = player_on_turn
         self.game_over = False
         self.game_winner = Player.NONE
+
 
     def drop(self, col: int) -> None:
         """
